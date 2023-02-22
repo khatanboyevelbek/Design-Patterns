@@ -5,13 +5,13 @@ namespace FactoryPattern.Factories
 {
     public class CountryFactory
     {
-        public static ICountry Create(string countryName)
+        public static ICountry Create(CountryList countryName)
         {
             return countryName switch
             {
-                "Uzbekistan" => 
+                CountryList.Uzbekistan => 
                     new Uzbekistan(capital: "Tashkent", location: "Central Asia", population: 35000000),
-                "Poland" =>
+                CountryList.Poland =>
                     new Poland(capital: "Warsaw", location: "Central Europe", population: 38000000)
             };
         }
